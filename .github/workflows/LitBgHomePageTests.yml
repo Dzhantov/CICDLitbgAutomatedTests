@@ -24,7 +24,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    
+    - name: Grant permissions for Playwright
+      run: chmod +x ./node_modules/.bin/playwright
     - name: Install Playwright browsers
       run: npx playwright install
     
