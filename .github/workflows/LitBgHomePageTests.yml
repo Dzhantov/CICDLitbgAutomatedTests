@@ -1,4 +1,4 @@
-name: Node.js CI
+name: LitBG CI
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
     - run: npm install
     
     - name: Install Playwright browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install
     
     - run: npm test
