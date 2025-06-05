@@ -1,11 +1,15 @@
 import { test, expect} from '@playwright/test';
 import { HomePage } from '../Pages/HomePage.js';
+import { ProductPage } from '../Pages/ProductPage.js';
+
 
 test.describe('Home Page Tests', ()=>{
     let homePage;
+    let productPage;
 
     test.beforeEach(async({page})=>{
         homePage = new HomePage(page);
+        productPage = new ProductPage(page);
         await homePage.goto();
     });
     
@@ -22,8 +26,16 @@ test.describe('Home Page Tests', ()=>{
 
     });
 
-        test('Atleast one product is visible on home page', async()=>{
+    test('Atleast one product is visible on home page', async()=>{
             const productIsVisible = await homePage.isProductBoxVisible();
             expect(productIsVisible).toBe(true);
     });
+
+    test('Product can be selected from the home page', async()=>{
+        await homePage.selectProductFromHomePage();
+        const isVisible = await productPage.isProductContainerVisible();
+        expect(isVisible).toBe(true);
+
+    await expect(productPage.productPageTitle).toBeVisible();
+    })
 });

@@ -5,6 +5,8 @@ export class HomePage {
         this.homePageTitle = homePage.getByTestId('home-page-title');
         this.bannerSection = homePage.locator('.grid-row.grid-row-top-2');
         this.productBox = homePage.locator('.product-thumb').first();
+        this.productPageTitle = homePage.locator('.product-page-title');
+        
     };
 
     async goto() {
@@ -19,5 +21,9 @@ export class HomePage {
 
     async isProductBoxVisible() {
         return await this.productBox.isVisible();
+    };
+
+    async selectProductFromHomePage(){
+        await this.productBox.click();
     };
 }
