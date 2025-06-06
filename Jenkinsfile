@@ -24,10 +24,14 @@ pipeline{
             }
         }
 
-        stage('Run tests'){
+        stage('Start application and run tests'){
             steps {
                 script {
-                    bat 'npx playwright test'
+                    bat 'npm start &'
+                    // Wait for the application to start
+                    bat 'wait-on http://localhost:3000'
+                    // Run Playwright tests
+                    bat 'npx playwright test --config=playwright.config.js'
                 }
             }
         }
