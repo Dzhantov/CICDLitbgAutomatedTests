@@ -1,13 +1,13 @@
 pipeline{
     agent any
 
-    environment {
-        NODE_VERSION = '18.x'
-    }
+    // environment {
+    //     NODE_VERSION = '18.x'
+    // }
 
-    tools{
-        nodejs "NodeJS-${NODE_VERSION}"
-    }
+    // tools{
+    //     nodejs "NodeJS-${NODE_VERSION}"
+    // }
 
     stages{
         stage('Checkout'){
