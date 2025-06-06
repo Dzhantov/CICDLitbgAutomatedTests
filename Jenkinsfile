@@ -27,9 +27,6 @@ pipeline{
         stage('Start application and run tests'){
             steps {
                 script {
-                    
-                    // Wait for the application to start
-                    bat 'wait-on http://localhost:8080'
                     // Run Playwright tests
                     bat 'npx playwright test'
                 }
