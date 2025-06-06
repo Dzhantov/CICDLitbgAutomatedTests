@@ -12,14 +12,14 @@ pipeline{
     stages{
         stage('Checkout'){
             steps {
-                checkout scm
+                git branch: 'main', url: 'https://github.com/Dzhantov/CICDLitbgAutomatedTests.git'
             }
         }
 
         stage('Install Dependencies'){
             steps {
                 script {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline{
         stage('Run tests'){
             steps {
                 script {
-                    sh 'npm test'
+                    bat 'npx playwright test'
                 }
             }
         }
