@@ -29,7 +29,7 @@ pipeline{
                 script {
                     bat 'npm start &'
                     // Wait for the application to start
-                    bat 'wait-on http://localhost:3000'
+                    bat 'wait-on http://localhost:8080'
                     // Run Playwright tests
                     bat 'npx playwright test --config=playwright.config.js'
                 }
