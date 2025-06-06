@@ -27,11 +27,11 @@ pipeline{
         stage('Start application and run tests'){
             steps {
                 script {
-                    bat 'npm start &'
+                    
                     // Wait for the application to start
                     bat 'wait-on http://localhost:8080'
                     // Run Playwright tests
-                    bat 'npx playwright test --config=playwright.config.js'
+                    bat 'npx playwright test'
                 }
             }
         }
@@ -41,7 +41,7 @@ pipeline{
         always {
             script {
                 // Archive test results
-                junit '**/test-results.xml'
+                junit 'test-results/results.xml'
             }
         }
         success {
