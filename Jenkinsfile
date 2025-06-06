@@ -1,14 +1,6 @@
 pipeline{
     agent any
 
-    // environment {
-    //     NODE_VERSION = '18.x'
-    // }
-
-    // tools{
-    //     nodejs "NodeJS-${NODE_VERSION}"
-    // }
-
     stages{
         stage('Checkout'){
             steps {
@@ -24,7 +16,13 @@ pipeline{
             }
         }
 
-        stage('Start application and run tests'){
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run tests'){
             steps {
                 script {
                     // Run Playwright tests
