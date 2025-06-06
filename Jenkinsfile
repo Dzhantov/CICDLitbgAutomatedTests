@@ -37,6 +37,7 @@ pipeline{
             script {
                 // Archive test results
                 junit 'test-results/results.xml'
+                archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
             }
         }
         success {
