@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Playwright test reports
+playwright-report/
+test-results/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+temp/
+tmp/
+
+# Environment variables
+.env
+.env.*
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+*.lcov
