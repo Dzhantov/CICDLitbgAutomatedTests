@@ -6,7 +6,9 @@ export class HomePage {
         this.bannerSection = homePage.locator('.grid-row.grid-row-top-2');
         this.productBox = homePage.locator('.product-thumb').first();
         this.productPageTitle = homePage.locator('.product-page-title');
-        
+        this.mainMenu = homePage.locator('#main-menu');
+        this.cartOnHomePage = homePage.locator('#cart');
+        this.headerCartGroupIcons = homePage.locator('.header-cart-group');
     };
 
     async goto() {

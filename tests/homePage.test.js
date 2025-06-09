@@ -37,5 +37,17 @@ test.describe('Home Page Tests', ()=>{
         expect(isVisible).toBe(true);
 
     await expect(productPage.productPageTitle).toBeVisible();
-    })
+    });
+
+    test('Main menu is visible', async()=>{
+        await expect(homePage.mainMenu).toBeVisible();
+    });
+
+    test('Cart is visible on the home page', async()=>{
+        await expect(homePage.cartOnHomePage).toBeVisible();
+    });
+
+    test('Header cart group icons are visible', async()=>{
+        await expect(homePage.headerCartGroupIcons).toBeVisible();
+    });
 });
