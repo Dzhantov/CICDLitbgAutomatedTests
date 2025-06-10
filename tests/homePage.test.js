@@ -16,14 +16,12 @@ test.describe('Home Page Tests', ()=>{
     test('Title is visible', async({page})=>{
 
         await expect(page).toHaveTitle('Lit.bg - Онлайн магазин за дрехи');
-
     });
         
     test('Categories banners are visible', async()=>{
 
         const isVisible = await homePage.isBannerSectionVisible();
         expect(isVisible).toBe(true);
-
     });
 
     test('Atleast one product is visible on home page', async()=>{
@@ -36,7 +34,7 @@ test.describe('Home Page Tests', ()=>{
         const isVisible = await productPage.isProductContainerVisible();
         expect(isVisible).toBe(true);
 
-    await expect(productPage.productPageTitle).toBeVisible();
+        await expect(productPage.productPageTitle).toBeVisible();
     });
 
     test('Main menu is visible', async()=>{
