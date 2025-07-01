@@ -1,32 +1,16 @@
-<testsuites id="" name="" tests="13" failures="0" skipped="0" errors="0" time="14.198467999999998">
-<testsuite name="homePage.test.js" timestamp="2025-06-10T10:20:31.490Z" hostname="" tests="7" failures="0" skipped="0" time="13.497" errors="0">
-<testcase name="Home Page Tests › Title is visible" classname="homePage.test.js" time="3.182">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="7.822804999999935">
+<testsuite name="productPage.test.js" timestamp="2025-07-01T08:48:51.340Z" hostname="" tests="6" failures="0" skipped="0" time="6.244" errors="0">
+<testcase name="Product Page Tests › Product title is visible" classname="productPage.test.js" time="1.122">
 </testcase>
-<testcase name="Home Page Tests › Categories banners are visible" classname="homePage.test.js" time="2.38">
+<testcase name="Product Page Tests › Main product image is visible" classname="productPage.test.js" time="1.134">
 </testcase>
-<testcase name="Home Page Tests › Atleast one product is visible on home page" classname="homePage.test.js" time="1.874">
+<testcase name="Product Page Tests › Description tab is visible on product page" classname="productPage.test.js" time="0.922">
 </testcase>
-<testcase name="Home Page Tests › Product can be selected from the home page" classname="homePage.test.js" time="1.842">
+<testcase name="Product Page Tests › Product price is visible on product page" classname="productPage.test.js" time="1.01">
 </testcase>
-<testcase name="Home Page Tests › Main menu is visible" classname="homePage.test.js" time="1.666">
+<testcase name="Product Page Tests › Product options are visible on product page" classname="productPage.test.js" time="1.065">
 </testcase>
-<testcase name="Home Page Tests › Cart is visible on the home page" classname="homePage.test.js" time="1.38">
-</testcase>
-<testcase name="Home Page Tests › Header cart group icons are visible" classname="homePage.test.js" time="1.173">
-</testcase>
-</testsuite>
-<testsuite name="productPage.test.js" timestamp="2025-06-10T10:20:31.490Z" hostname="" tests="6" failures="0" skipped="0" time="11.533" errors="0">
-<testcase name="Product Page Tests › Product title is visible" classname="productPage.test.js" time="2.054">
-</testcase>
-<testcase name="Product Page Tests › Main product image is visible" classname="productPage.test.js" time="1.81">
-</testcase>
-<testcase name="Product Page Tests › Description tab is visible on product page" classname="productPage.test.js" time="1.957">
-</testcase>
-<testcase name="Product Page Tests › Product price is visible on product page" classname="productPage.test.js" time="1.76">
-</testcase>
-<testcase name="Product Page Tests › Product options are visible on product page" classname="productPage.test.js" time="1.893">
-</testcase>
-<testcase name="Product Page Tests › Buy button is visible on product page" classname="productPage.test.js" time="2.059">
+<testcase name="Product Page Tests › Buy button is visible on product page" classname="productPage.test.js" time="0.991">
 </testcase>
 </testsuite>
 </testsuites>

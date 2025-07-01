@@ -4,7 +4,7 @@ export class ProductPage {
         this.productPage = productPage;
         this.productPageTitle = productPage.getByRole('heading', { level: 1 });
         this.productContainer = productPage.locator('.container')
-        this.productMainImage = productPage.locator('.swiper.main-image.swiper-has-pages');
+        this.productMainImage = productPage.locator('.swiper-wrapper').first();
         this.productDescriptionTab = productPage.getByText('Описание');
         this.productPrice = productPage.locator('.product-price');
         this.productOptions = productPage.locator('.product-options');
